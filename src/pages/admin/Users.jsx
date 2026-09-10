@@ -101,12 +101,16 @@ function Users() {
                                         </td>
 
                                         <td className="p-3">
-                                            <button
-                                                onClick={() => deleteUser(user._id)}
-                                                className="bg-red-600 text-white px-3 py-1 rounded"
-                                            >
-                                                Delete
-                                            </button>
+
+                                            {user.role !== "Admin" && (
+                                                <button
+                                                    onClick={() => deleteUser(user._id)}
+                                                    className="bg-red-600 text-white px-3 py-1 rounded"
+                                                >
+                                                    Delete
+                                                </button>
+                                            )}
+
                                         </td>
 
                                     </tr>
